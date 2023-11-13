@@ -1,12 +1,12 @@
 #!/bin/bash
 
 run_child_process() {
-    sleep $1
+    sleep $SLEEP_TIME
 }
 
 num_processes=5
 for ((i=1; i<=$num_processes; i++)); do
-    run_child_process $1 &
+    run_child_process &
 done
 
 wait
